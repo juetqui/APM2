@@ -38,4 +38,9 @@ public class PlayerPrefsController : MonoBehaviour
     {
         return PlayerPrefs.GetInt("Player_Credits", 30);
     }
+
+    public void Delete()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

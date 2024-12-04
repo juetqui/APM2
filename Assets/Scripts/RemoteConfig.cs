@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Services.RemoteConfig;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using TMPro;
 
 public class RemoteConfig : MonoBehaviour
