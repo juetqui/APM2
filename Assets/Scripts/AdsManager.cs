@@ -5,6 +5,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 {
     [SerializeField] string gameID = "5743370";
     [SerializeField] string adID = "Rewarded_Android";
+    [SerializeField] private PlayerPrefsController _prefs;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
+
     }
 
     public void ShowAD()
@@ -29,11 +31,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
+
     }
 
     public void OnUnityAdsShowStart(string placementId)
     {
-        Debug.Log("Start");
+
     }
 
     public void OnUnityAdsShowClick(string placementId)
@@ -43,12 +46,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         if(showCompletionState == UnityAdsShowCompletionState.COMPLETED)
-        {
-            Debug.Log("Te doy la recompensa");
-        }
-        else
-        {
-            Debug.Log("No te doy nada"); 
-        }
+            _prefs.SaveForAdd(30);
     }
 }
