@@ -9,14 +9,18 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button StartBtn;
     [SerializeField] Button ControlsBtn;
     [SerializeField] Button BackBtn;
+    [SerializeField] Button OptionsBtn;
     [SerializeField] CanvasGroup FrontUI;
     [SerializeField] CanvasGroup ControllsUI;
+    [SerializeField] CanvasGroup OptionsUI;
     [SerializeField] LevelManager levelManager;
+
     private void Start()
     {
         StartBtn.onClick.AddListener(StartGame);
         ControlsBtn.onClick.AddListener(SwithToControlUI);
         BackBtn.onClick.AddListener(SwitchToFrontUI);
+        OptionsBtn.onClick.AddListener(SwitchToFrontUI);
     }
 
     private void SwitchToFrontUI()
@@ -32,6 +36,15 @@ public class MainMenu : MonoBehaviour
     {
         ControllsUI.blocksRaycasts = true;
         ControllsUI.alpha = 1;
+
+        FrontUI.blocksRaycasts = false;
+        FrontUI.alpha = 0;
+    }
+
+    private void SwithToOptionsUI()
+    {
+        OptionsUI.blocksRaycasts = true;
+        OptionsUI.alpha = 1;
 
         FrontUI.blocksRaycasts = false;
         FrontUI.alpha = 0;
