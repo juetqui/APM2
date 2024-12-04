@@ -10157,13 +10157,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 36f219b089c9ddb42af57baeac2aaac6, type: 2}
     - target: {fileID: 9500000, guid: a5674d01884853d4e8f2386a171e14d9, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Ellen_Chest'\n\tTransform 'Ellen_Spine'\n\tTransform
-        'Ellen_Hips'\n\tTransform 'Ellen_Left_Toes'\n\tTransform 'Ellen_Left_Arm'\n\tTransform
-        'Ellen_Left_IndexIntermediate'\n\tTransform 'Ellen_Left_UpperLeg'\n\tTransform
-        'Ellen_Right_PinkyDistal'\n\tTransform 'Ellen_Right_UpperArm'\n\tTransform
-        'Ellen_Chest'\n\tand more ...\n\tFrom animation clip 'Ellen_Spawn'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: a5674d01884853d4e8f2386a171e14d9, type: 3}
       propertyPath: m_ReceiveShadows
@@ -17945,15 +17939,3 @@ PrefabInstance:
       addedObject: {fileID: 1260442528}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aafd96b36a03594b949ea46de7203ff, type: 3}
---- !u!1660057539 &9223372036854775807
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 742975427}
-  - {fileID: 129614759}
-  - {fileID: 1788805556}
-  - {fileID: 1086103328}
-  - {fileID: 1218615182}
-  - {fileID: 242681284288243837}
-  - {fileID: 1726433658}
-  - {fileID: 2110598156}
