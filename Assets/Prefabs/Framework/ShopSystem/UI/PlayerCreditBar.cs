@@ -19,6 +19,8 @@ public class PlayerCreditBar : MonoBehaviour
 
     private void UpdateCredit(int newCredit)
     {
+        Debug.Log("Parameter: " + newCredit);
+        Debug.Log("Prefs: " + PlayerPrefs.GetInt("Player_Credits", 30));
         creditText.SetText(newCredit.ToString());
     }
 

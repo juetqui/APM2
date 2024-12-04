@@ -6,7 +6,7 @@ public class Player : MonoBehaviour, ITeamInterface
     [SerializeField] JoyStick aimStick;
     [SerializeField] CharacterController characterController; 
     [SerializeField] float moveSpeed = 20f; 
-    [SerializeField] float maxMoveSpeed = 80f; 
+    [SerializeField] float maxMoveSpeed = 60f; 
     [SerializeField] float minMoveSpeed = 5f; 
     [SerializeField] float animTurnSpeed = 30f;
     [SerializeField] MovementComponent movementComponent;

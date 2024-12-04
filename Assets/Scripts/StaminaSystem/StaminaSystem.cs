@@ -16,6 +16,8 @@ public class StaminaSystem : MonoBehaviour
 
     private DateTime _nextStaminaTime = default, _lastStaminaTime = default;
 
+    public int CurrentStamina { get { return _currentStamina; } }
+
     private void Start()
     {
         Load();
@@ -64,6 +66,7 @@ public class StaminaSystem : MonoBehaviour
 
         UpdateStaminaUI();
         Save();
+
         return true;
     }
 

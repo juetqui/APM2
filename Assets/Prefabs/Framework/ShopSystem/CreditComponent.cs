@@ -11,8 +11,15 @@ public class CreditComponent : MonoBehaviour, IRewardListener
 {
     [SerializeField] int credits;
     [SerializeField] Component[] PurchaseListeners;
+    
+    public PlayerPrefsController _playerPrefsController;
 
     List<IPurchaseListener> purchaseListenerInterfaces = new List<IPurchaseListener>();
+
+    private void Awake()
+    {
+        credits = _playerPrefsController.Load();
+    }
 
     private void Start()
     {
@@ -65,5 +72,10 @@ public class CreditComponent : MonoBehaviour, IRewardListener
     {
         credits += reward.creditReward;
         onCreditChanged?.Invoke(credits);
+    }
+
+    public void SetPrefs(PlayerPrefsController prefs)
+    {
+        _playerPrefsController = prefs;
     }
 }
