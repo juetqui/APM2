@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Notifications.Android;
 using System;
@@ -26,8 +24,8 @@ public class NotificationManager : MonoBehaviour
         {
             Title = "Volvé a jugar",
             Text = "Pasó mucho tiempo desde que jugaste la última vez, volvé al juego.",
-            LargeIcon = "Main_Large_Icon",
-            SmallIcon = "Main_Small_Icon",
+            LargeIcon = "main_large_icon",
+            SmallIcon = "main_small_icon",
             FireTime = DateTime.Now.AddSeconds(100)
         };
 
