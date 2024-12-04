@@ -46,11 +46,6 @@ public class StaminaSystem : MonoBehaviour
         else return DateTime.Parse(date);
     }
 
-    public void UseStaminaButton(int stamina)
-    {
-        UseStamina(stamina);
-    }
-
     public bool UseStamina(int stamina)
     {
         if (_currentStamina < stamina)
