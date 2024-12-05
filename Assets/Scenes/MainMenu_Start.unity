@@ -8748,6 +8748,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963041631}
   m_CullTransparentMesh: 1
+--- !u!114 &975890739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4066649316344540107, guid: 5aafd96b36a03594b949ea46de7203ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242681284288243837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &981760071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15614,6 +15626,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1727971452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727971454}
+  - component: {fileID: 1727971453}
+  m_Layer: 0
+  m_Name: RemoteConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1727971453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727971452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235f8afd35e8f0c45a7865032ca34c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaSystem: {fileID: 2110598155}
+  prefs: {fileID: 168457057}
+  serverOutPanel: {fileID: 0}
+  versionText: {fileID: 0}
+  title: {fileID: 975890739}
+  startCurrency: 0
+  maxStamina: 0
+  staminaCooldown: 0
+--- !u!4 &1727971454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727971452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.85922, y: -12.46864, z: -21.674448}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1730204074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18904,6 +18968,7 @@ MonoBehaviour:
   _staminaCooldown: 30
   _timerText: {fileID: 866035841}
   _staminaText: {fileID: 1260442529}
+  _remoteConfig: {fileID: 1727971453}
 --- !u!4 &2110598156
 Transform:
   m_ObjectHideFlags: 0
@@ -19577,3 +19642,4 @@ SceneRoots:
   - {fileID: 242681284288243837}
   - {fileID: 495439022}
   - {fileID: 168457058}
+  - {fileID: 1727971454}

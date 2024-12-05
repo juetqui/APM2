@@ -10,13 +10,17 @@ public class RemoteConfig : MonoBehaviour
     public struct userAttributes { }
     public struct appAttributes { }
 
+    [SerializeField] StaminaSystem staminaSystem;
+    [SerializeField] PlayerPrefsController prefs;
+
     [SerializeField] GameObject serverOutPanel;
     [SerializeField] TextMeshProUGUI versionText;
     //[SerializeField] GameManager GM;
-    [SerializeField] TextMeshProUGUI winText;
-    [SerializeField] TextMeshProUGUI looseText;
+    [SerializeField] TextMeshProUGUI title;
 
-    private void Start()
+    public int startCurrency = default, maxStamina = default, staminaCooldown = default;
+
+    private void Awake()
     {
         StartProcess();
     }
@@ -54,13 +58,15 @@ public class RemoteConfig : MonoBehaviour
         if (versionText != null)
             versionText.text = RemoteConfigService.Instance.appConfig.config.Value<int>("Int_Version").ToString();
 
-        //if (GM != null)
-        //    GM.changeObjective(RemoteConfigService.Instance.appConfig.config.Value<int>("Int_EnemiesObj"));
+        if (title != null)
+            title.text = RemoteConfigService.Instance.appConfig.config.Value<string>("Str_Name");
 
-        if (winText != null)
-            winText.text = RemoteConfigService.Instance.appConfig.config.Value<string>("Str_Win");
+        startCurrency = RemoteConfigService.Instance.appConfig.config.Value<int>("Int_StartCurrency");
+        maxStamina = RemoteConfigService.Instance.appConfig.config.Value<int>("Int_MaxStamina");
+        staminaCooldown = RemoteConfigService.Instance.appConfig.config.Value<int>("Int_StaminaCooldown");
 
-        if (looseText != null)
-            looseText.text = RemoteConfigService.Instance.appConfig.config.Value<string>("Str_Loose");
+        prefs.Init(startCurrency);
+        staminaSystem.Init(maxStamina, staminaCooldown);
     }
 }
+

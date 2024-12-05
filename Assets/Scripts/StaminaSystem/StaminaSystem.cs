@@ -9,10 +9,10 @@ public class StaminaSystem : MonoBehaviour
     [SerializeField] private float _staminaCooldown = 10.0f;
     [SerializeField] private TextMeshProUGUI _timerText;
     [SerializeField] private TextMeshProUGUI _staminaText;
+    [SerializeField] private RemoteConfig _remoteConfig;
 
     private int _currentStamina = default;
     private bool _isRecharging = default;
-    private float _timer = default;
 
     private DateTime _nextStaminaTime = default, _lastStaminaTime = default;
 
@@ -87,6 +87,12 @@ public class StaminaSystem : MonoBehaviour
     public void UpdateStaminaUI()
     {
         _staminaText.text = _currentStamina.ToString() +  "/" + _maxStamina.ToString();
+    }
+
+    public void Init(int maxStamina, int staminaCooldown)
+    {
+        _maxStamina = maxStamina;
+        _staminaCooldown = staminaCooldown;
     }
 
     private IEnumerator AutoRechargeStamina()

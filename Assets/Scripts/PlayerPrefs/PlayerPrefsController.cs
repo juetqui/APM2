@@ -4,6 +4,8 @@ public class PlayerPrefsController : MonoBehaviour
 {
     [SerializeField] private CreditComponent _creditComponent;
 
+    private int _startCurrency = default;
+
     public delegate void OnSavedPrefs(int myCurrency);
     public event OnSavedPrefs onSavedPrefs;
 
@@ -27,8 +29,8 @@ public class PlayerPrefsController : MonoBehaviour
 
     public void SaveForAdd(int reward)
     {
-        int myCurrency = PlayerPrefs.GetInt("Player_Credits", 30) + reward;
-        PlayerPrefs.SetInt("Player_Credits", PlayerPrefs.GetInt("Player_Credits", 30));
+        int myCurrency = PlayerPrefs.GetInt("Player_Credits", _startCurrency) + reward;
+        PlayerPrefs.SetInt("Player_Credits", myCurrency);
         
         onSavedPrefs?.Invoke(myCurrency);
         return;
@@ -36,11 +38,17 @@ public class PlayerPrefsController : MonoBehaviour
 
     public int Load()
     {
-        return PlayerPrefs.GetInt("Player_Credits", 30);
+        return PlayerPrefs.GetInt("Player_Credits", _startCurrency);
     }
 
     public void Delete()
     {
         PlayerPrefs.DeleteAll();
+        onSavedPrefs?.Invoke(PlayerPrefs.GetInt("Player_Credits", _startCurrency));
+    }
+
+    public void Init(int startCurrency)
+    {
+        _startCurrency = startCurrency;
     }
 }
