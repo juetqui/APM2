@@ -12,40 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"85bc8441-3e48-48e7-a0c6-7afaf562266e\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2124d4ea-0e4c-4044-891f-ae2a3ce1c1cc\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServerOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"326049fb-69b4-4b13-a4cc-c89831eb7155\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"fa215f97-94ee-4eec-9f74-5007ff16001f\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b9ec6387-2b51-4224-86b9-d1aa8061acea\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"98584604-b960-445f-a897-ae53e130f0b1\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Int_StartCurrency\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5579a2f6-b7cc-4abd-b3fd-d63d2592dd40\"\r\n   
+    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5f10d79b-909c-4cfd-b94d-9b8fed20a16d\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Int_MaxStamina\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 10\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"da435b19-1a3f-4457-877d-676ebc060403\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"value\": 30,\r\n     
-    \"type\": \"int\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"3f7651e5-281f-4d58-b90c-27618d4360b4\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"Str_Name\",\r\n      \"value\": \"Exterminator\",\r\n      \"type\":
-    \"string\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"85bc8441-3e48-48e7-a0c6-7afaf562266e\"\r\n   
+    {\r\n      \"entityId\": \"ce7fcfd1-5214-4c93-8339-b5a6ddd88582\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"328db606-5bca-48c5-b777-7cb6b62d0ea4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Str_Name\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Exterminator\"\r\n   
+    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2124d4ea-0e4c-4044-891f-ae2a3ce1c1cc\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServerOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"326049fb-69b4-4b13-a4cc-c89831eb7155\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"fa215f97-94ee-4eec-9f74-5007ff16001f\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b9ec6387-2b51-4224-86b9-d1aa8061acea\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"98584604-b960-445f-a897-ae53e130f0b1\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Int_StartCurrency\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5579a2f6-b7cc-4abd-b3fd-d63d2592dd40\"\r\n   
+    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5f10d79b-909c-4cfd-b94d-9b8fed20a16d\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Int_MaxStamina\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 10\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"da435b19-1a3f-4457-877d-676ebc060403\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"value\": 30,\r\n     
-    \"type\": \"int\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"3f7651e5-281f-4d58-b90c-27618d4360b4\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"Str_Name\",\r\n      \"value\": \"Exterminator\",\r\n      \"type\":
-    \"string\"\r\n    }\r\n  }\r\n]"
+    {\r\n      \"entityId\": \"ce7fcfd1-5214-4c93-8339-b5a6ddd88582\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"328db606-5bca-48c5-b777-7cb6b62d0ea4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Str_Name\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Exterminator\"\r\n   
+    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"3ef4cfcb-a4df-4fa2-a8c9-9ea8df95c985\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"a880bddf-5036-4c1b-a423-efc1d75a3c47\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2024-12-01T20:29:39Z\",\r\n    \"updatedAt\":

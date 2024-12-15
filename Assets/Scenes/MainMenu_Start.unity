@@ -3513,7 +3513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameID: 5743370
-  adID: Interstitial_Android
+  adBannerID: Banner_Android
+  adInterstitialID: Interstitial_Android
+  adRewardedID: Rewarded_Android
   _prefs: {fileID: 168457057}
 --- !u!114 &495439024
 MonoBehaviour:
@@ -12302,7 +12304,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 495439023}
         m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
-        m_MethodName: ShowAD
+        m_MethodName: ShowRewardedAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
