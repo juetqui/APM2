@@ -8,7 +8,7 @@ public class RangedWeapon : Weapon
     public override void Attack()
     {
         GameObject target = aimComp.GetAimTarget(out Vector3 aimDir);
-        DamageGameObject(target, damage);
+        if (target != null) DamageGameObject(target, damage);
 
         bulletVfx.transform.rotation = Quaternion.LookRotation(aimDir);
         bulletVfx.Emit(bulletVfx.emission.GetBurst(0).maxCount);

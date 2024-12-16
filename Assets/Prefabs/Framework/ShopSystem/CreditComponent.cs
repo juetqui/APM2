@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +17,8 @@ public class CreditComponent : MonoBehaviour, IRewardListener
 
     private void Awake()
     {
-        credits = _playerPrefsController.Load();
+        if (_playerPrefsController != null)
+            credits = _playerPrefsController.Load();
     }
 
     private void Start()
