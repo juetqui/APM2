@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,12 +7,14 @@ public class PlayerCreditBar : MonoBehaviour
     [SerializeField] UIManager uiManager;
     [SerializeField] CreditComponent creditComp;
     [SerializeField] TextMeshProUGUI creditText;
+    [SerializeField] PlayerPrefsController prefs;
 
     private void Start()
     {
         ShopBtn.onClick.AddListener(PullOutShop);
         creditComp.onCreditChanged += UpdateCredit;
         UpdateCredit(creditComp.Credit);
+        prefs.onSavedPrefs += UpdateCredit;
     }
 
     private void UpdateCredit(int newCredit)

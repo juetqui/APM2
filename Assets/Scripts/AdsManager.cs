@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.SceneManagement;
 
 public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsShowListener
 {
@@ -26,7 +27,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     {
         Advertisement.Load(adInterstitialID);
         Advertisement.Load(adRewardedID);
-        LoadBanner();
+
+        if(SceneManager.GetActiveScene().name == "MainMenu_Start") 
+            LoadBanner();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
@@ -76,6 +79,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
             if (placementId == "Rewarded_Android")
                 _prefs.SaveForAdd(30);
             else if (placementId == "Interstitial_Android")
+                Debug.Log("a");
                 _prefs.SaveForAdd(30);
         }
         else return;

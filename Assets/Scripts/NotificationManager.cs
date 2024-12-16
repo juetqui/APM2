@@ -4,31 +4,68 @@ using System;
 
 public class NotificationManager : MonoBehaviour
 {
+    private bool isGameRunning = true;
+
     private void Start()
     {
-        AndroidNotificationCenter.CancelAllDisplayedNotifications();
-        AndroidNotificationCenter.CancelAllScheduledNotifications();
-
-
+        // Crear y registrar el canal de notificaciones
         var notifChannel = new AndroidNotificationChannel()
         {
             Id = "remind_notif_ch",
             Name = "Generic Channel",
-            Description = "Una descripción del channel",
-            Importance = Importance.Low
+            Description = "Canal de notificaciones para el juego.",
+            Importance = Importance.Default // Nivel de importancia: visible y con sonido
         };
-
         AndroidNotificationCenter.RegisterNotificationChannel(notifChannel);
+    }
 
-        var notif = new AndroidNotification()
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        // Detecta si el juego entra en segundo plano
+        if (pauseStatus)
         {
-            Title = "Volvé a jugar",
-            Text = "Pasó mucho tiempo desde que jugaste la última vez, volvé al juego.",
+            isGameRunning = false;
+            ScheduleNotifications();
+        }
+        else
+        {
+            // Si el juego vuelve al primer plano, cancela las notificaciones
+            isGameRunning = true;
+            AndroidNotificationCenter.CancelAllScheduledNotifications();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        // Cuando se cierra la aplicación, programa las notificaciones
+        isGameRunning = false;
+        ScheduleNotifications();
+    }
+
+    private void ScheduleNotifications()
+    {
+        if (isGameRunning)
+            return;
+
+        // Programar las notificaciones solo si el juego no está funcionando
+        AndroidNotificationCenter.CancelAllScheduledNotifications();
+
+        ScheduleNotification("Volvé a jugar", "Pasó mucho tiempo desde que jugaste la última vez, ¡volvé al juego!", 30);
+        ScheduleNotification("Stamina cargada", "¡Ya podés volver a jugar!", 180);
+        ScheduleNotification("Recupera stamina!", "Recuerda que puedes cargar stamina más rápido viendo anuncios!", 60);
+    }
+
+    private void ScheduleNotification(string title, string text, int delaySeconds)
+    {
+        var notification = new AndroidNotification()
+        {
+            Title = title,
+            Text = text,
             LargeIcon = "main_large_icon",
             SmallIcon = "main_small_icon",
-            FireTime = DateTime.Now.AddSeconds(100)
+            FireTime = DateTime.Now.AddSeconds(delaySeconds)
         };
 
-        AndroidNotificationCenter.SendNotification(notif, notifChannel.Id);
+        AndroidNotificationCenter.SendNotification(notification, "remind_notif_ch");
     }
 }
