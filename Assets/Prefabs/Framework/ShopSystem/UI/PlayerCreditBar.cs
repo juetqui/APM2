@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +7,9 @@ public class PlayerCreditBar : MonoBehaviour
     [SerializeField] UIManager uiManager;
     [SerializeField] CreditComponent creditComp;
     [SerializeField] TextMeshProUGUI creditText;
+
+    public delegate void OnShopClicked();
+    public event OnShopClicked onShopClicked;
 
     private void Start()
     {
@@ -25,6 +25,7 @@ public class PlayerCreditBar : MonoBehaviour
 
     private void PullOutShop()
     {
+        onShopClicked?.Invoke();
         uiManager.SwithToShop();
     }
 }
