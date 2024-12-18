@@ -10,14 +10,15 @@ public class CanvasControler : MonoBehaviour
 
     private GameObject _currentArrow = null;
 
-    private Vector3 _arrowScale = new Vector3(2.5f, 2.5f, 2.5f);
     private Vector3 _arrowOriginalScale = new Vector3(2f, 2f, 2f);
     private Vector3 _arrowAddScale = new Vector3(0.25f, 0.25f, 0.25f);
+    private Vector3 _arrowUpdatedScale = new Vector3(2.5f, 2.5f, 2.5f);
 
     private bool _canGrow = true;
 
     void Start()
     {
+        LevelManager.Instance.onLevelFinished += CloseTutorial;
         _tutorialController.onOpenCanvas += UpdateText;
         _tutorialController.onOpenCanvas += UpdateArrow;
     }
@@ -27,6 +28,16 @@ public class CanvasControler : MonoBehaviour
         MoveArrow();
     }
 
+    public void CloseTutorial()
+    {
+        LevelManager.Instance.onLevelFinished -= CloseTutorial;
+        _tutorialController.onOpenCanvas -= UpdateText;
+        _tutorialController.onOpenCanvas -= UpdateArrow;
+
+        _text.text = "";
+        gameObject.SetActive(false);
+    }
+
     private void UpdateText(int index)
     {
         if (index < _tutorialTexts.Length) _text.text = _tutorialTexts[index];
@@ -34,19 +45,24 @@ public class CanvasControler : MonoBehaviour
 
     private void UpdateArrow(int index)
     {
-        if (index < _tutorialArrows.Length)
+        if (index <= _tutorialArrows.Length)
         {
+            int i = index;
+
             foreach (var arrow in _tutorialArrows)
                 arrow.SetActive(false);
 
-            _currentArrow = _tutorialArrows[index];
+            if (index == _tutorialArrows.Length) i--;
+
+            _currentArrow = _tutorialArrows[i];
             _currentArrow.SetActive(true);
         }
+        else _currentArrow.SetActive(false);
     }
 
     private void MoveArrow()
     {
-        if (_canGrow && _currentArrow.transform.localScale.x < _arrowScale.x && _currentArrow.transform.localScale.y < _arrowScale.y)
+        if (_canGrow && _currentArrow.transform.localScale.x < _arrowUpdatedScale.x && _currentArrow.transform.localScale.y < _arrowUpdatedScale.y)
             _currentArrow.transform.localScale += _arrowAddScale * Time.deltaTime;
         else _canGrow = false;
 

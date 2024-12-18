@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: levelManager
   m_EditorClassIdentifier: 
   MainMenuBuildIndex: 0
-  FirstLevelBuildIndex: 1
+  TutorialBuildIndex: 1
+  FirstLevelBuildIndex: 2
+  SecondLevelBuildIndex: 3

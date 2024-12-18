@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,7 +32,7 @@ public class UIManager : MonoBehaviour
             SetCurrentActiveGrp(AllChildren[0]);
         }
 
-        LevelManager.onLevelFinished += LevelFinished;
+        LevelManager.Instance.onLevelFinished += LevelFinished;
     }
 
     private void LevelFinished()

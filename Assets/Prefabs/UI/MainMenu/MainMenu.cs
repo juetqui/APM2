@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,10 +14,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField] CanvasGroup FrontUI;
     [SerializeField] CanvasGroup ControllsUI;
     [SerializeField] CanvasGroup OptionsUI;
-    [SerializeField] LevelManager levelManager;
+    //[SerializeField] LevelManager levelManager;
     [SerializeField] StaminaSystem staminaSystem;
     [SerializeField] PlayerPrefsController prefs;
     [SerializeField] TextMeshProUGUI currencyText;
+
+    [SerializeField] CanvasGroup LoadingScreen;
+    [SerializeField] Image LoadingBar;
 
     private void Start()
     {
@@ -25,6 +30,8 @@ public class MainMenu : MonoBehaviour
         BackBtn.onClick.AddListener(SwitchToFrontUI);
         BackBtnOptions.onClick.AddListener(SwitchToFrontUI);
 
+        LoadingScreen.gameObject.SetActive(false);
+        
         prefs.onSavedPrefs += SetCurrencyText;
 
         SetCurrencyText(prefs.Load());
@@ -62,7 +69,7 @@ public class MainMenu : MonoBehaviour
 
     private void StartGame()
     {
-        if (staminaSystem.UseStamina(3)) levelManager.LoadFirstLevel();
+        if (staminaSystem.UseStamina(3)) LevelManager.Instance.LoadTutorial();
     }
 
     private void SetCurrencyText(int myCurrency)

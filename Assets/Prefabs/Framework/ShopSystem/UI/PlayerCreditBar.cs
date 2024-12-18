@@ -17,7 +17,8 @@ public class PlayerCreditBar : MonoBehaviour
         ShopBtn.onClick.AddListener(PullOutShop);
         creditComp.onCreditChanged += UpdateCredit;
         UpdateCredit(creditComp.Credit);
-        prefs.onSavedPrefs += UpdateCredit;
+
+        if (prefs != null) prefs.onSavedPrefs += UpdateCredit;
     }
 
     private void UpdateCredit(int newCredit)

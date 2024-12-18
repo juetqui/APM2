@@ -21,7 +21,6 @@ public class TutorialController : MonoBehaviour
 
     private void Update()
     {
-        _shopBackButton.onClick.AddListener(UpdateEvent);
     }
 
     private void UpdateEvent()
@@ -33,14 +32,22 @@ public class TutorialController : MonoBehaviour
     public void UpdateEventMove(Vector2 vector2)
     {
         _moveStick.onStickValueUpdated -= UpdateEventMove;
-        _shopButton.onShopClicked += UpdateEventBuy;
+        _shopButton.onShopClicked += UpdateEventShop;
+        UpdateEvent();
+    }
+
+    public void UpdateEventShop()
+    {
+        _shopButton.onShopClicked -= UpdateEventShop;
+        _shopBackButton.onClick.AddListener(UpdateEventBuy);
         UpdateEvent();
     }
 
     public void UpdateEventBuy()
     {
-        _shopButton.onShopClicked -= UpdateEventBuy;
+        _shopBackButton.onClick.RemoveListener(UpdateEventBuy);
         _shootStick.onStickTaped += UpdateEventChange;
+        UpdateEvent();
     }
 
     public void UpdateEventChange()

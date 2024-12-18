@@ -26,7 +26,7 @@ public class EnemyCounter : MonoBehaviour
         EnemyCountUpdated?.Invoke(EnemyCount);
         if (EnemyCount <= 0)
         {
-            LevelManager.LevelFinished();
+            LevelManager.Instance.LevelFinished();
         }
     }
 }
