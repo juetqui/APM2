@@ -12,38 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2a1466a3-bec4-44b2-a866-e7df5d43719f\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0da9c503-a58f-4c5c-9fab-39f9db344821\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServerOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"bece0662-fc10-4d0b-9788-07f83a2a1e3b\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"baf52375-cb68-4688-baa5-35c072a0cbcd\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"149b14b7-0ff0-422c-b37b-1ccaeda17a3b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"d3516f26-8b8c-4e2a-9d0a-8630525bed24\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Int_StartCurrency\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3ef374d6-a117-41ad-801d-9a5c0d747884\"\r\n   
+    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f7c52909-c6d8-4b6c-a29e-e46f306376dc\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Int_MaxStamina\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 10\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"3ca7cc57-f363-4602-ba09-33cc58183218\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"6db3aada-02ff-4fe5-bdc3-b5a836b2c797\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"1ff79646-5673-4e96-94f9-f8b19b3e7750\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"46132948-beeb-4541-afa0-a8a8304bfeee\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Str_Name\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Exterminator\"\r\n   
     }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2a1466a3-bec4-44b2-a866-e7df5d43719f\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0da9c503-a58f-4c5c-9fab-39f9db344821\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServerOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"bece0662-fc10-4d0b-9788-07f83a2a1e3b\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"baf52375-cb68-4688-baa5-35c072a0cbcd\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"149b14b7-0ff0-422c-b37b-1ccaeda17a3b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"d3516f26-8b8c-4e2a-9d0a-8630525bed24\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Int_StartCurrency\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3ef374d6-a117-41ad-801d-9a5c0d747884\"\r\n   
+    30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f7c52909-c6d8-4b6c-a29e-e46f306376dc\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Int_MaxStamina\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 10\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"3ca7cc57-f363-4602-ba09-33cc58183218\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"6db3aada-02ff-4fe5-bdc3-b5a836b2c797\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_StaminaCooldown\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 30\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"1ff79646-5673-4e96-94f9-f8b19b3e7750\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"46132948-beeb-4541-afa0-a8a8304bfeee\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Str_Name\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Exterminator\"\r\n   
     }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"3ef4cfcb-a4df-4fa2-a8c9-9ea8df95c985\",\r\n   

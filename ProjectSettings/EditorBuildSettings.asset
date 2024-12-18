@@ -10,6 +10,9 @@ EditorBuildSettings:
     guid: 0df6c42041ca71e49967eb72aac54ec8
   - enabled: 1
     path: Assets/Vendor/EnvArt/Scene/Level_1.unity
+    guid: 6f70591215a4ebc44ae5f554a935baf4
+  - enabled: 1
+    path: Assets/Vendor/EnvArt/Scene/Level_2.unity
     guid: 7138f1327ad7d4a4385a0386d5f24d50
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e249698477b7c498b8d6ea0be4495524,
