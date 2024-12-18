@@ -7,6 +7,7 @@ public class PlayerCreditBar : MonoBehaviour
     [SerializeField] UIManager uiManager;
     [SerializeField] CreditComponent creditComp;
     [SerializeField] TextMeshProUGUI creditText;
+    [SerializeField] PlayerPrefsController prefs;
 
     public delegate void OnShopClicked();
     public event OnShopClicked onShopClicked;
@@ -16,6 +17,7 @@ public class PlayerCreditBar : MonoBehaviour
         ShopBtn.onClick.AddListener(PullOutShop);
         creditComp.onCreditChanged += UpdateCredit;
         UpdateCredit(creditComp.Credit);
+        prefs.onSavedPrefs += UpdateCredit;
     }
 
     private void UpdateCredit(int newCredit)

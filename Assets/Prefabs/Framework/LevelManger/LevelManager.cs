@@ -6,6 +6,7 @@ public class LevelManager : ScriptableObject
 {
     [SerializeField] int MainMenuBuildIndex = 0;
     [SerializeField] int FirstLevelBuildIndex = 1;
+    [SerializeField] int SecondLevelBuildIndex = 2;
 
     public delegate void OnLevelFinished();
     public static event OnLevelFinished onLevelFinished;
@@ -23,6 +24,11 @@ public class LevelManager : ScriptableObject
     public void LoadFirstLevel()
     {
         LoadSceneByIndex(FirstLevelBuildIndex);
+    }
+
+    public void LoadSecondLevel()
+    {
+        LoadSceneByIndex(SecondLevelBuildIndex);
     }
 
     public void RestartCurrentLevel()
