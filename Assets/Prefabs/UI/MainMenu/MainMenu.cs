@@ -14,13 +14,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] CanvasGroup FrontUI;
     [SerializeField] CanvasGroup ControllsUI;
     [SerializeField] CanvasGroup OptionsUI;
-    //[SerializeField] LevelManager levelManager;
     [SerializeField] StaminaSystem staminaSystem;
     [SerializeField] PlayerPrefsController prefs;
     [SerializeField] TextMeshProUGUI currencyText;
-
-    [SerializeField] CanvasGroup LoadingScreen;
-    [SerializeField] Image LoadingBar;
 
     private void Start()
     {
@@ -29,8 +25,6 @@ public class MainMenu : MonoBehaviour
         OptionsBtn.onClick.AddListener(SwithToOptionsUI);
         BackBtn.onClick.AddListener(SwitchToFrontUI);
         BackBtnOptions.onClick.AddListener(SwitchToFrontUI);
-
-        LoadingScreen.gameObject.SetActive(false);
         
         prefs.onSavedPrefs += SetCurrencyText;
 
