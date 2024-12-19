@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour
 
     private void LevelFinished()
     {
+        LevelManager.Instance.onLevelFinished -= LevelFinished;
         SetCurrentActiveGrp(WinMenu);
         GameplayStatics.SetGamePaused(true);
         uiAudioPlayer.PlayWin();
